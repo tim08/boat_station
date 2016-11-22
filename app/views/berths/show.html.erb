@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @berth.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @berth.lng %>
+</p>
+
+<%= link_to 'Edit', edit_berth_path(@berth) %> |
+<%= link_to 'Back', berths_path %>

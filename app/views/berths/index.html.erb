@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Berths</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Lat</th>
+      <th>Lng</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @berths.each do |berth| %>
+      <tr>
+        <td><%= berth.lat %></td>
+        <td><%= berth.lng %></td>
+        <td><%= link_to 'Show', berth %></td>
+        <td><%= link_to 'Edit', edit_berth_path(berth) %></td>
+        <td><%= link_to 'Destroy', berth, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Berth', new_berth_path %>

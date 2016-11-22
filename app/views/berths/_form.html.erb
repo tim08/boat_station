@@ -1,0 +1,27 @@
+<%= form_for(berth) do |f| %>
+  <% if berth.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(berth.errors.count, "error") %> prohibited this berth from being saved:</h2>
+
+      <ul>
+      <% berth.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :lat %>
+    <%= f.text_field :lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :lng %>
+    <%= f.text_field :lng %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
